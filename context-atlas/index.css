@@ -1,0 +1,264 @@
+/*
+Copyright 2018 Google LLC. All Rights Reserved.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+==============================================================================
+*/
+
+/*
+CSS styling for demo.
+*/
+
+body {
+  font-family: Helvetica Neue, sans-serif;
+  margin: 0px;
+}
+
+#top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00695C;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#top-bar i {
+  font-size: 16px;
+}
+
+#top-bar a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+}
+
+#top-bar a:hover {
+  color: #34A853;
+}
+
+#info-bar {
+  position: absolute;
+  margin: 20px;
+  border: 1px solid gainsboro;
+  width: min-content;
+}
+
+#inputs {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(240, 240, 240, .8);
+  font-size: 12px;
+  line-height: 12px;
+  padding: 10px;
+  padding-top: 0px
+}
+
+#diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bootstrap-select .btn:focus {
+  outline: none !important;
+}
+
+#loading {
+  margin-top: 100px;
+}
+
+.description {
+  text-shadow: 3px 3px 4px gray;
+}
+
+#legend {
+  position: absolute;
+  right: 0;
+  padding: 10px;
+  margin: 20px;
+  border: 1px solid gainsboro;
+  background-color: rgba(240, 240, 240, .8);
+  font-size: 12px;
+  line-height: 14px;
+}
+
+
+#words-selector {
+  border-radius: 3px;
+  background-color: white;
+  padding: 0px 10px;
+  box-shadow: 0px 0px 4px rgba(100, 100, 100, .4);
+  margin: 0px -5px 10px;
+}
+
+#legend.hidden {
+  display: none;
+}
+
+.legend-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  margin: 0px 5px;
+  border-radius: 50%;
+  opacity: .5;
+}
+
+.word {
+  /* color: #ff8f00; */
+  color: black;
+  font-weight: bold;
+}
+
+.info-icon {
+  font-size: 12px;
+  line-height: 0px;
+  position: relative;
+  top: 2px;
+  left: -2px;
+}
+
+.info-icon:hover {
+  cursor: default;
+}
+
+
+.option.disabled {
+  color: gray;
+}
+
+#logo {
+  height: 12px;
+}
+
+#info {
+  padding-bottom: 10px;
+  max-height: 200px;
+  overflow: hidden;
+  transition: max-height 0.2s linear, padding 0.2s linear;
+  width: 252px;
+}
+
+#info.closed {
+  max-height: 0px;
+  padding-bottom: 0px;
+}
+
+#info a {
+  color: black;
+  background-color: rgba(0, 105, 92, .2);
+  text-decoration: none;
+}
+
+#info a:hover {
+  background-color: rgba(0, 105, 92, .5);
+}
+
+#expand:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+mark {
+  color: white;
+  background-color: rgba(63, 81, 181, .7);
+}
+
+#toggles {
+  display: flex;
+  flex-direction: column;
+}
+
+#toggles.hidden {
+  display: none;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#pos {
+  display: flex;
+  padding: 5px 0px;
+}
+
+
+#dropdown {
+  border: 0px;
+  padding: 7px;
+  margin: 5px;
+  margin-right: 0px;
+  outline: none !important;
+  background-color: rgba(30, 30, 30, .13);
+  font-size: 12px;
+}
+
+.tooltip {
+  top: -1000px;
+  position: fixed;
+  padding: 5px;
+  background: rgba(255, 255, 255, .90);
+  border: 1px solid lightgray;
+  pointer-events: none;
+  max-width: 350px;
+}
+
+.tooltip-hidden {
+  opacity: 0;
+  transition: all .3s;
+  transition-delay: .1s;
+}
+
+@media only screen and (max-width: 590px) {
+  #info-bar {
+    margin: 0px;
+    width: 100%;
+  }
+
+  #inputs {
+    padding-bottom: 0px;
+  }
+
+  #info {
+    width: 100%;
+  }
+
+  #legend {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 590px) {
+  div.tooltip {
+    bottom: -1px;
+    width: calc(100%);
+    left: -1px !important;
+    right: -1px !important;
+    top: auto !important;
+    width: auto !important;
+  }
+}
+
+.tooltip b {
+  padding-left: 2px;
+  padding-right: 2px;
+}
